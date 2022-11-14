@@ -1,0 +1,45 @@
+<script>
+  window.ub.form.validationRules.employees.digitsonly = true;
+</script>
+
+<script>
+  window.ub.form.validationRules.first_name.textonly = true;
+</script>
+
+<script>
+  window.ub.form.validationRules.last_name.textonly = true;
+</script>
+
+<script>
+  window.ub.form.customValidators.digitsonly = {
+    isValid: function(value) {
+      return /^[0-9]+$/.test(value);
+    },
+
+    message: 'Please enter digits only',
+  };
+</script>
+
+<script>
+  window.ub.form.customValidators.textonly = {
+    isValid: function(value) {
+      return /^[a-zA-Z]+$/.test(value);
+    },
+
+    message: 'Please enter Alaphabets only',
+  };
+</script>
+
+<script>
+  window.ub.form.validationRules.company.characterminlimit = true;
+</script>
+
+<script>
+  window.ub.form.customValidators.characterminlimit = {
+    isValid: function(value) {
+        return /^(?=.{5,50})/.test(value);
+    },
+    message: 'Enter min 5 character',
+  };
+</script>
+
